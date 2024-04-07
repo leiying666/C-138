@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+char* my_strcpy(char* dest,const char* src)
+{
+    char* ret=dest;
+    while(*dest++=*src++)
+    {}
+    return ret;
+}
+int main()
+{
+    char a[]="abcdef";
+    char b[]="bit";
+    my_strcpy(a,b);
+    printf("%s",a);
+}
